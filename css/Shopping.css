@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgb(60, 124, 197);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+  z-index: 50;
+}
+
+.nav-right {
+  text-align: right;
+  float: right;
+}
+
+.nav-right li {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+}
+
+.nav-right li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav-right li a:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+.nav-right .active {
+  background-color: #04aa6d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container > h1 {
+  padding: 50px 0;
+}
+
+.cart {
+  display: flex;
+}
+
+.products {
+  flex: 0.75;
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid silver;
+  margin-bottom: 20px;
+}
+
+.product:hover {
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product > img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.product-name,
+.product-price {
+  margin-bottom: 20px;
+}
+
+.product-remove {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 25px;
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product-remove:hover {
+  background-color: white;
+  color: royalblue;
+  font-weight: 600;
+  border: 1px solid royalblue;
+}
+
+.cart-total {
+  flex: 0.25;
+  margin-left: 20px;
+  padding: 20px;
+  height: 200px;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+.cart-total p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.cart-total a {
+  display: block;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: tomato;
+  color: white;
+  text-decoration: none;
+}
+
+.cart-total a:hover {
+  background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+  .remove {
+    display: none;
+  }
+
+  .product {
+    height: 150px;
+  }
+
+  .product > img {
+    height: 150px;
+
+    width: 200px;
+  }
+
+  .product-name,
+  .product-price {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cart {
+    flex-direction: column;
+  }
+
+  .cart-total {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .container {
+    max-width: 95%;
+  }
+}
